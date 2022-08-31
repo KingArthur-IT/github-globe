@@ -98,7 +98,7 @@ function initGlobe() {
     .hexPolygonResolution(3)
     .hexPolygonMargin(0.7)
     .showAtmosphere(true)
-    // .atmosphereColor("#3a228a") //Атмосфера вокруг Земли
+    // .atmosphereColor("#3a228a")
     .atmosphereAltitude(0.25)
     .hexPolygonColor((e) => {
       if (
@@ -106,8 +106,8 @@ function initGlobe() {
           e.properties.ISO_A3
         )
       ) {
-        return "rgba(60, 81, 124, 1)";      //Цвет точек
-      } else return "rgba(60, 81, 124, 1)"; //Цвет точек
+        return "rgba(60, 81, 124, 1)";      //!!Цвет точек
+      } else return "rgba(60, 81, 124, 1)"; //!!Цвет точек
     });
 
   // NOTE Arc animations are followed after the globe enters the scene
@@ -147,7 +147,7 @@ function initGlobe() {
   Globe.rotateY(-Math.PI * (5 / 9));
   Globe.rotateZ(-Math.PI / 6);
   const globeMaterial = Globe.globeMaterial();
-  globeMaterial.color = new Color(0x233662); //Цвет фона планеты
+  globeMaterial.color = new Color(0x233662); //!!Цвет фона планеты
   globeMaterial.emissive = new Color(0x220038);
   globeMaterial.emissiveIntensity = 0.1;
   globeMaterial.shininess = 0.7;
